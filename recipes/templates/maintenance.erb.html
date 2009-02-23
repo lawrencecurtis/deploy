@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>The system is down for <%= reason ? reason : "maintenance" %> - <%= Time.now.strftime("%H:%M %Z") %></title>
+  <style type="text/css" media="screen">
+  html, body, p, h1, h2 {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    font-family: lucida grande;
+  }
+
+  #header {
+    background: #333;
+    border-bottom: 1px dotted #000;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  h2 {
+    font-size: 22px;
+    padding: 100px 30px 10px 30px;
+    color: #a1a0ae;
+    text-shadow: 1px 1px 1px #000;
+  }
+  
+  p {
+    margin: 10px 30px;
+    font-size: 12px;
+    font-family: arial;
+    color: #333;
+  }
+
+  p.error {
+    background: pink;
+    -webkit-border-radius: 5px;
+    padding: 7px 14px;
+    font-weight: bold;
+    margin: 40px 30px 20px 30px;
+  }
+  </style>
+</head>
+<body id="maintenance">
+  <div id="header">
+    <h2>The system is currently down!</h2>
+  </div>
+  <p class="error">
+    The system is down for <%= reason ? reason : "maintenance" %> <small>(<%= Time.now.strftime("%H:%M %Z") %>)</small>
+  </p>
+  <p>
+    Normal service will resume <%= deadline ? deadline : "shortly" %>.
+  </body>
+  </html>
