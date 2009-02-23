@@ -6,6 +6,7 @@ h2. Install
 
 Go into your rails project and type....
 
+  ./script/plugin install git://github.com/lawrencecurtis/deploy.git
   capify .
 
 Then open up the config/deploy.rb and add something similar to this...
