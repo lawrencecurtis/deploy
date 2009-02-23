@@ -13,7 +13,7 @@ Then open up the config/deploy.rb and add something similar to this...
 <pre>
 set :application, "lawrencecurtis.co.uk" # www. auto prefixed
 set :repository,  "git://github.com/lawrencecurtis/lawrencecurtis.co.uk.git"
-set :scm "git"
+set :scm, "git"
 
 set :user, "deploy"
 set :runner, user
