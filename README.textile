@@ -10,7 +10,7 @@ Go into your rails project and type....
 
 Then open up the config/deploy.rb and add something similar to this...
 
-<pre><code>
+<pre>
 set :application, "lawrencecurtis.co.uk" # www. auto prefixed
 set :repository,  "git://github.com/lawrencecurtis/lawrencecurtis.co.uk.git"
 set :scm "git"
@@ -31,7 +31,7 @@ set :deploy_to, "/srv/#{application}"
 role :app, "servername.com"
 role :web, "servername.com"
 role :db,  "servername.com", :primary => true
-</code></pre>
+</pre>
   
 h2. Usage
 
