@@ -41,6 +41,7 @@ namespace :yellowpad do
   
   desc "Setup Nginx vhost config"
   task :nginx_vhost, :roles => :app do
+    sudo "chown -R #{user}:#{runner} /srv/#{application}"
     result = render_erb_template(File.dirname(__FILE__) + "/templates/nginx.vhost.conf.erb")
     put result, "/tmp/nginx.vhost.conf"
     sudo "mkdir -p /srv/vhost.d"
